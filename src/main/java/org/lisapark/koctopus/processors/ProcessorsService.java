@@ -25,9 +25,9 @@ import static spark.Spark.*;
  *
  * @author alexmy
  */
-public class ComputeService {
+public class ProcessorsService {
     
-    static final Logger LOG = Logger.getLogger(ComputeService.class.getName());
+    static final Logger LOG = Logger.getLogger(ProcessorsService.class.getName());
 
     public static void main(String[] args) {
        KosCache kosCache = new KosCache();
@@ -46,7 +46,7 @@ public class ComputeService {
         });
         
         // Map requests
-        post(endPoint + "compute", (req, res) -> {
+        post(endPoint + "processors", (req, res) -> {
             LOG.log(Level.INFO, "{0}:{1}", new Object[]{endPoint, "processors"});
             return new HttpEndPoint(kosCache).startProcessing(req, res);
         });
