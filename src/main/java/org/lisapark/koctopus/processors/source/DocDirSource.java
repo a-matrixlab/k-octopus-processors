@@ -38,7 +38,7 @@ import java.util.logging.Logger;
 import java.util.stream.Stream;
 import org.lisapark.koctopus.core.ProcessingException;
 import org.lisapark.koctopus.core.graph.Gnode;
-import org.lisapark.koctopus.repo.graph.GraphUtils;
+import org.lisapark.koctopus.repo.utils.GraphUtils;
 import org.lisapark.koctopus.core.graph.api.GraphVocabulary;
 import org.lisapark.koctopus.core.source.external.CompiledExternalSource;
 import org.lisapark.koctopus.core.source.external.AbstractExternalSource;

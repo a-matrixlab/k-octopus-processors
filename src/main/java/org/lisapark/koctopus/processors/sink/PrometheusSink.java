@@ -34,7 +34,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.UUID;
 import org.lisapark.koctopus.core.graph.Gnode;
-import org.lisapark.koctopus.repo.graph.GraphUtils;
+import org.lisapark.koctopus.repo.utils.GraphUtils;
 import org.lisapark.koctopus.core.graph.api.GraphVocabulary;
 import org.lisapark.koctopus.core.parameter.Parameter;
 import org.lisapark.koctopus.core.transport.TransportReference;

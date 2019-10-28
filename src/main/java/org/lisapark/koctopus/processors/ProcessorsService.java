@@ -18,7 +18,7 @@ package org.lisapark.koctopus.processors;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.lisapark.koctopus.repo.KosCache;
+import org.lisapark.koctopus.repo.RepoCache;
 import static spark.Spark.*;
 
 /**
@@ -30,10 +30,10 @@ public class ProcessorsService {
     static final Logger LOG = Logger.getLogger(ProcessorsService.class.getName());
 
     public static void main(String[] args) {
-       KosCache kosCache = new KosCache();
+       RepoCache kosCache = new RepoCache();
         
         // Set Server port
-        int _port = 4567;
+        int _port = 5678;
         String endPoint = "/k-octopus/";
         if (args.length > 0) {
             _port = Integer.valueOf(args[0]);

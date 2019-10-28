@@ -23,7 +23,7 @@ import java.util.UUID;
 import org.lisapark.koctopus.core.ProcessingModel;
 import org.lisapark.koctopus.core.graph.Gnode;
 import org.lisapark.koctopus.core.graph.Graph;
-import org.lisapark.koctopus.repo.graph.GraphUtils;
+import org.lisapark.koctopus.repo.utils.GraphUtils;
 
 /**
  *
