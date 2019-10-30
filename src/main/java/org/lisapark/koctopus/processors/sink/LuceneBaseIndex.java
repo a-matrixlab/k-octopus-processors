@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.lisapark.koctopus.processors.sink.lucene;
+package org.lisapark.koctopus.processors.sink;
 
 import com.fasterxml.uuid.Generators;
 import com.google.common.collect.ImmutableList;
@@ -163,12 +163,14 @@ public class LuceneBaseIndex extends AbstractExternalSink {
         return new LuceneBaseIndex(this);
     }
 
-    public static LuceneBaseIndex newTemplate() {
+    @Override
+    public  LuceneBaseIndex newTemplate() {
         UUID sinkId = Generators.timeBasedGenerator().generate();
         return newTemplate(sinkId);
     }
 
-    public static LuceneBaseIndex newTemplate(UUID sinkId) {
+    @Override
+    public  LuceneBaseIndex newTemplate(UUID sinkId) {
         LuceneBaseIndex luceneBaseIndex = new LuceneBaseIndex(sinkId, DEFAULT_NAME, DEFAULT_DESCRIPTION);
 //        luceneBaseIndex.addParameter(
 //                Parameter.stringParameterWithIdAndName(TRANSPORT_PARAMETER_ID, "Redis URL").

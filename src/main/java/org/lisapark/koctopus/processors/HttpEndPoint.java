@@ -19,7 +19,7 @@ package org.lisapark.koctopus.processors;
 import java.util.logging.Logger;
 import org.lisapark.koctopus.core.ProcessingException;
 import org.lisapark.koctopus.core.ValidationException;
-import org.lisapark.koctopus.repo.BaseExecutor;
+import org.lisapark.koctopus.runner.BaseExecutor;
 import org.lisapark.koctopus.repo.RepoCache;
 import org.lisapark.koctopus.repo.ServiceUtils;
 import spark.Request;

@@ -117,15 +117,16 @@ public class DocDirSource extends AbstractExternalSource {
         return fileDirSource;
     }
 
-    public static DocDirSource newTemplate() {
+    public DocDirSource newTemplate() {
         UUID sourceId = Generators.timeBasedGenerator().generate();
         return newTemplate(sourceId);
     }
 
-    public static DocDirSource newTemplate(UUID sourceId) {
+    public DocDirSource newTemplate(UUID sourceId) {
         DocDirSource dirSource = new DocDirSource(sourceId, DEFAULT_NAME, DEFAULT_DESCRIPTION);
         try {
             dirSource.setOutput(Output.outputWithId(DIR_PATH).setName("Output"));
+            
             dirSource.addParameter(Parameter.stringParameterWithIdAndName(DIR_PATH, "Dir Path").
                     description("Directory path to read files from.").required(true));
 

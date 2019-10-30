@@ -98,12 +98,12 @@ public class TestSourceRedis extends AbstractExternalSource {
         return testSource;
     }
    
-    public static TestSourceRedis newTemplate() {
+    public TestSourceRedis newTemplate() {
         UUID sourceId = Generators.timeBasedGenerator().generate();
         return newTemplate(sourceId);
     }
     
-    public static TestSourceRedis newTemplate(UUID sourceId) {
+    public TestSourceRedis newTemplate(UUID sourceId) {
         TestSourceRedis testSource = new TestSourceRedis(sourceId, DEFAULT_NAME, DEFAULT_DESCRIPTION);
         testSource.setOutput(Output.outputWithId(1).setName("Output"));
         testSource.addParameter(

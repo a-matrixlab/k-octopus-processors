@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.lisapark.koctopus.processors.processor.sma;
+package org.lisapark.koctopus.processors.processor;
 
 import com.fasterxml.uuid.Generators;
 import io.lettuce.core.StreamMessage;
@@ -62,10 +62,10 @@ import org.lisapark.koctopus.core.transport.Transport;
  * @author dave sinclair(david.sinclair@lisa-park.com)
  */
 @Persistable
-public class SmaRedis extends AbstractProcessor<Double> {
+public class NewSma extends AbstractProcessor<Double> {
 
-    private static final String DEFAULT_NAME = "SMA Redis";
-    private static final String DEFAULT_DESCRIPTION = "Simple Moving Average from Redis.";
+    private static final String DEFAULT_NAME = "New SMA Redis";
+    private static final String DEFAULT_DESCRIPTION = "Copy of Simple Moving Average from Redis.";
     private static final String DEFAULT_WINDOW_LENGTH_DESCRIPTION = "Number of data points to consider when calculating the average.";
     private static final String DEFAULT_INPUT_DESCRIPTION = "This is the attribute from the connected source that the"
             + " SMA will be averaging.";
@@ -86,19 +86,19 @@ public class SmaRedis extends AbstractProcessor<Double> {
 
     protected Map<String, TransportReference> procrefs = new HashMap<>();
 
-    public SmaRedis() {
+    public NewSma() {
         super(Generators.timeBasedGenerator().generate(), DEFAULT_NAME, DEFAULT_INPUT_DESCRIPTION);
     }
 
-    protected SmaRedis(UUID id, String name, String description) {
+    protected NewSma(UUID id, String name, String description) {
         super(id, name, description);
     }
 
-    protected SmaRedis(UUID id, SmaRedis copyFromSma) {
+    protected NewSma(UUID id, NewSma copyFromSma) {
         super(id, copyFromSma);
     }
 
-    protected SmaRedis(SmaRedis copyFromSma) {
+    protected NewSma(NewSma copyFromSma) {
         super(copyFromSma);
     }
 
@@ -117,19 +117,19 @@ public class SmaRedis extends AbstractProcessor<Double> {
     }
 
     @Override
-    public SmaRedis copyOf() {
-        return new SmaRedis(this);
+    public NewSma copyOf() {
+        return new NewSma(this);
     }
 
     @Override
-    public SmaRedis newInstance() {
-        return new SmaRedis(Generators.timeBasedGenerator().generate(), this);
+    public NewSma newInstance() {
+        return new NewSma(Generators.timeBasedGenerator().generate(), this);
     }
 
     @Override
-    public SmaRedis newInstance(Gnode gnode) {
+    public NewSma newInstance(Gnode gnode) {
         String uuid = gnode.getId() == null ? Generators.timeBasedGenerator().generate().toString() : gnode.getId();
-        SmaRedis smaRedis = newTemplate(UUID.fromString(uuid));
+        NewSma smaRedis = newTemplate(UUID.fromString(uuid));
         GraphUtils.buildProcessor(smaRedis, gnode);
 
         return smaRedis;
@@ -142,13 +142,15 @@ public class SmaRedis extends AbstractProcessor<Double> {
      *
      * @return new {@link Sma}
      */
-    public static SmaRedis newTemplate() {
+    @Override
+    public NewSma newTemplate() {
         UUID uuid = Generators.timeBasedGenerator().generate();
         return newTemplate(uuid);
     }
 
-    public static SmaRedis newTemplate(UUID uuid) {
-        SmaRedis sma = new SmaRedis(uuid, DEFAULT_NAME, DEFAULT_DESCRIPTION);
+    @Override
+    public NewSma newTemplate(UUID uuid) {
+        NewSma sma = new NewSma(uuid, DEFAULT_NAME, DEFAULT_DESCRIPTION);
         // sma only has window length paramater
         sma.addParameter(
                 Parameter.integerParameterWithIdAndName(WINDOW_LENGTH_PARAMETER_ID, "Time window").
@@ -198,13 +200,13 @@ public class SmaRedis extends AbstractProcessor<Double> {
     public CompiledProcessor<Double> compile() throws ValidationException {
         validate();
         // we copy all the inputs and output taking a "snapshot" of this processor so we are isolated of changes
-        SmaRedis copy = copyOf();
+        NewSma copy = copyOf();
         return new CompiledSma(copy);
     }
 
     @Override
     public <T extends AbstractProcessor> CompiledProcessor<Double> compile(T processor) throws ValidationException {
-        return new CompiledSma((SmaRedis) processor);
+        return new CompiledSma((NewSma) processor);
     }
 
     @Override
@@ -225,9 +227,9 @@ public class SmaRedis extends AbstractProcessor<Double> {
 
         private final String inputAttributeName;
 
-        private final SmaRedis sma;
+        private final NewSma sma;
 
-        protected CompiledSma(SmaRedis sma) {
+        protected CompiledSma(NewSma sma) {
             super(sma);
             this.sma = sma;
             this.inputAttributeName = sma.getInput().getSourceAttributeName();

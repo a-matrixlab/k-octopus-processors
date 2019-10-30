@@ -49,8 +49,8 @@ public class FileSource extends AbstractExternalSource {
     
     static final Logger LOG = Logger.getLogger(FileSource.class.getName());
     
-    private static final String DEFAULT_NAME = "Test data source for Redis";
-    private static final String DEFAULT_DESCRIPTION = "Generate source data according to the provided attribute list.";
+    private static final String DEFAULT_NAME = "File data source";
+    private static final String DEFAULT_DESCRIPTION = "Reads data from a flat file and sends lines as stream messages to the Redis.";
     
     private static final int NUMBER_OF_EVENTS_PARAMETER_ID = 1;
     private static final int TRANSPORT_PARAMETER_ID = 2;
@@ -103,12 +103,14 @@ public class FileSource extends AbstractExternalSource {
         return testSource;
     }
    
-    public static FileSource newTemplate() {
+    @Override
+    public FileSource newTemplate() {
         UUID sourceId = Generators.timeBasedGenerator().generate();
         return newTemplate(sourceId);
     }
     
-    public static FileSource newTemplate(UUID sourceId) {
+    @Override
+    public FileSource newTemplate(UUID sourceId) {
         FileSource testSource = new FileSource(sourceId, DEFAULT_NAME, DEFAULT_DESCRIPTION);
         testSource.setOutput(Output.outputWithId(1).setName("Output"));
         testSource.addParameter(

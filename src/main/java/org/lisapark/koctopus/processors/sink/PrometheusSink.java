@@ -151,12 +151,14 @@ public class PrometheusSink extends AbstractExternalSink {
         return new PrometheusSink(this);
     }
 
-    public static PrometheusSink newTemplate() {
+    @Override
+    public PrometheusSink newTemplate() {
         UUID sinkId = Generators.timeBasedGenerator().generate();
         return newTemplate(sinkId);
     }
 
-    public static PrometheusSink newTemplate(UUID sinkId) {
+    @Override
+    public PrometheusSink newTemplate(UUID sinkId) {
         PrometheusSink consoleSink = new PrometheusSink(sinkId, DEFAULT_NAME, DEFAULT_DESCRIPTION);
                 
         consoleSink.addParameter(

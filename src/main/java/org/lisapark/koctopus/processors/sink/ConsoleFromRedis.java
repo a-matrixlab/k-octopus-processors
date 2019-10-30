@@ -151,12 +151,12 @@ public class ConsoleFromRedis extends AbstractExternalSink {
         return new ConsoleFromRedis(this);
     }
 
-    public static ConsoleFromRedis newTemplate() {
+    public ConsoleFromRedis newTemplate() {
         UUID sinkId = Generators.timeBasedGenerator().generate();
         return newTemplate(sinkId);
     }
 
-    public static ConsoleFromRedis newTemplate(UUID sinkId) {
+    public ConsoleFromRedis newTemplate(UUID sinkId) {
         ConsoleFromRedis consoleSink = new ConsoleFromRedis(sinkId, DEFAULT_NAME, DEFAULT_DESCRIPTION);
 
         consoleSink.addParameter(
