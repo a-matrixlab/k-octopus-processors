@@ -54,7 +54,6 @@ import org.lisapark.koctopus.core.lucene.BaseDocLuceneIndex;
 import org.lisapark.koctopus.core.parameter.Parameter;
 import org.lisapark.koctopus.core.transport.TransportReference;
 import org.lisapark.koctopus.core.sink.external.CompiledExternalSink;
-import org.lisapark.koctopus.core.sink.external.ExternalSink;
 import org.lisapark.koctopus.core.sink.external.AbstractExternalSink;
 import org.lisapark.koctopus.core.transport.Transport;
 
@@ -195,7 +194,7 @@ public class LuceneBaseIndex extends AbstractExternalSink {
     }
 
     @Override
-    public <T extends ExternalSink> CompiledExternalSink compile(T sink) throws ValidationException {
+    public <T extends AbstractExternalSink> CompiledExternalSink compile(T sink) throws ValidationException {
         return new CompiledConsole((LuceneBaseIndex) sink);
     }
 

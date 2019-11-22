@@ -39,7 +39,6 @@ import org.lisapark.koctopus.core.graph.api.GraphVocabulary;
 import org.lisapark.koctopus.core.parameter.Parameter;
 import org.lisapark.koctopus.core.transport.TransportReference;
 import org.lisapark.koctopus.core.sink.external.CompiledExternalSink;
-import org.lisapark.koctopus.core.sink.external.ExternalSink;
 import org.lisapark.koctopus.core.sink.external.AbstractExternalSink;
 import org.lisapark.koctopus.core.transport.Transport;
 
@@ -151,17 +150,20 @@ public class ConsoleFromRedis extends AbstractExternalSink {
         return new ConsoleFromRedis(this);
     }
 
+    @Override
     public ConsoleFromRedis newTemplate() {
         UUID sinkId = Generators.timeBasedGenerator().generate();
         return newTemplate(sinkId);
     }
 
+    @Override
     public ConsoleFromRedis newTemplate(UUID sinkId) {
         ConsoleFromRedis consoleSink = new ConsoleFromRedis(sinkId, DEFAULT_NAME, DEFAULT_DESCRIPTION);
 
         consoleSink.addParameter(
                 Parameter.stringParameterWithIdAndName(ATTRIBUTE_LIST_PARAMETER_ID, ATTRIBUTE_LIST)
                         .description(ATTRIBUTE_LIST_DESCRIPTION)
+                .defaultValue("")
         );
         consoleSink.addParameter(
                 Parameter.integerParameterWithIdAndName(PAGE_SIZE_PARAMETER_ID, PAGE_SIZE)
@@ -177,7 +179,7 @@ public class ConsoleFromRedis extends AbstractExternalSink {
     }
 
     @Override
-    public <T extends ExternalSink> CompiledExternalSink compile(T sink) throws ValidationException {
+    public <T extends AbstractExternalSink> CompiledExternalSink compile(T sink) throws ValidationException {
         return new CompiledConsole((ConsoleFromRedis) sink);
     }
 
