@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>k-octopus</groupId>
     <artifactId>k-octopus-processors</artifactId>
-    <version>0.7.3</version>
+    <version>0.7.4</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,12 +22,12 @@
         <dependency>
             <groupId>k-octopus</groupId>
             <artifactId>k-octopus-core</artifactId>
-            <version>0.7.3</version>
+            <version>0.7.4</version>
         </dependency>
         <dependency>
             <groupId>k-octopus</groupId>
             <artifactId>k-octopus-repo</artifactId>
-            <version>0.7.3</version>
+            <version>0.7.4</version>
             <type>jar</type>
         </dependency>
         <dependency>
