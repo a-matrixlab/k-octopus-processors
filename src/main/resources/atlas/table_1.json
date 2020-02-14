@@ -1,0 +1,335 @@
+{
+    "referredEntities": {
+        "5dc91943-7c6c-4643-a1bd-d067385e4e23": {
+            "typeName": "Column",
+            "attributes": {
+                "owner": null,
+                "replicatedTo": null,
+                "replicatedFrom": null,
+                "qualifiedName": "time_id@cl1",
+                "dataType": "int",
+                "name": "time_id",
+                "description": null,
+                "comment": "time id"
+            },
+            "guid": "5dc91943-7c6c-4643-a1bd-d067385e4e23",
+            "status": "ACTIVE",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createTime": 1581528090619,
+            "updateTime": 1581528126030,
+            "version": 0,
+            "relationshipAttributes": {
+                "schema": [],
+                "inputToProcesses": [],
+                "meanings": [],
+                "table": {
+                    "guid": "48674071-3e5a-4f40-a220-fa75fd25a770",
+                    "typeName": "Table",
+                    "entityStatus": "ACTIVE",
+                    "displayText": "sales_fact_monthly_mv",
+                    "relationshipType": "Table_Columns",
+                    "relationshipGuid": "3bc05df8-1230-499a-b868-fc690520dc10",
+                    "relationshipStatus": "ACTIVE",
+                    "relationshipAttributes": {
+                        "typeName": "Table_Columns"
+                    }
+                },
+                "outputFromProcesses": []
+            }
+        },
+        "77c51001-d078-4c68-a8bf-ef7bbf5b2f70": {
+            "typeName": "StorageDesc",
+            "attributes": {
+                "owner": null,
+                "replicatedTo": null,
+                "replicatedFrom": null,
+                "qualifiedName": "sd:hdfs://host:8000/apps/warehouse/sales@cl1",
+                "name": "sd:hdfs://host:8000/apps/warehouse/sales",
+                "description": null,
+                "location": "hdfs://host:8000/apps/warehouse/sales",
+                "compressed": true,
+                "inputFormat": "TextInputFormat",
+                "outputFormat": "TextOutputFormat"
+            },
+            "guid": "77c51001-d078-4c68-a8bf-ef7bbf5b2f70",
+            "status": "ACTIVE",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createTime": 1581528090619,
+            "updateTime": 1581528126030,
+            "version": 0,
+            "relationshipAttributes": {
+                "schema": [],
+                "inputToProcesses": [],
+                "meanings": [],
+                "table": {
+                    "guid": "48674071-3e5a-4f40-a220-fa75fd25a770",
+                    "typeName": "Table",
+                    "entityStatus": "ACTIVE",
+                    "displayText": "sales_fact_monthly_mv",
+                    "relationshipType": "Table_StorageDesc",
+                    "relationshipGuid": "87f125c8-d3e9-4f92-8b48-548cd8e927a4",
+                    "relationshipStatus": "ACTIVE",
+                    "relationshipAttributes": {
+                        "typeName": "Table_StorageDesc"
+                    }
+                },
+                "outputFromProcesses": []
+            }
+        },
+        "8cd9e1f4-50ed-43be-868e-bdd3d42480c0": {
+            "typeName": "Column",
+            "attributes": {
+                "owner": null,
+                "replicatedTo": null,
+                "replicatedFrom": null,
+                "qualifiedName": "machine_id@cl1",
+                "dataType": "int",
+                "name": "machine_id",
+                "description": null,
+                "comment": "machine id"
+            },
+            "guid": "8cd9e1f4-50ed-43be-868e-bdd3d42480c0",
+            "status": "ACTIVE",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createTime": 1581528116088,
+            "updateTime": 1581528119809,
+            "version": 0,
+            "relationshipAttributes": {
+                "schema": [],
+                "inputToProcesses": [],
+                "meanings": [],
+                "table": {
+                    "guid": "9c67b531-7c93-4c97-b8d3-c483dcf0c1be",
+                    "typeName": "Table",
+                    "entityStatus": "ACTIVE",
+                    "displayText": "logging_fact_monthly_mv",
+                    "relationshipType": "Table_Columns",
+                    "relationshipGuid": "9e5b2202-7645-414d-8e1f-333008d50f70",
+                    "relationshipStatus": "ACTIVE",
+                    "relationshipAttributes": {
+                        "typeName": "Table_Columns"
+                    }
+                },
+                "outputFromProcesses": []
+            }
+        },
+        "37490f18-7563-4b53-93b4-a3ad927300c6": {
+            "typeName": "Column",
+            "attributes": {
+                "owner": null,
+                "replicatedTo": null,
+                "replicatedFrom": null,
+                "qualifiedName": "log@cl1",
+                "dataType": "string",
+                "name": "log",
+                "description": null,
+                "comment": "log data"
+            },
+            "guid": "37490f18-7563-4b53-93b4-a3ad927300c6",
+            "status": "ACTIVE",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createTime": 1581528116088,
+            "updateTime": 1581528119809,
+            "version": 0,
+            "relationshipAttributes": {
+                "schema": [],
+                "inputToProcesses": [],
+                "meanings": [],
+                "table": {
+                    "guid": "9c67b531-7c93-4c97-b8d3-c483dcf0c1be",
+                    "typeName": "Table",
+                    "entityStatus": "ACTIVE",
+                    "displayText": "logging_fact_monthly_mv",
+                    "relationshipType": "Table_Columns",
+                    "relationshipGuid": "1efad0d9-0723-41a2-b1f3-88b4aa0bdf7e",
+                    "relationshipStatus": "ACTIVE",
+                    "relationshipAttributes": {
+                        "typeName": "Table_Columns"
+                    }
+                },
+                "outputFromProcesses": []
+            },
+            "classifications": [{
+                    "typeName": "Log Data",
+                    "entityGuid": "37490f18-7563-4b53-93b4-a3ad927300c6",
+                    "entityStatus": "ACTIVE",
+                    "propagate": true,
+                    "removePropagationsOnEntityDelete": false
+                }]
+        },
+        "df7109dc-711d-48e2-83a4-1a4338b7ef7d": {
+            "typeName": "Column",
+            "attributes": {
+                "owner": null,
+                "replicatedTo": null,
+                "replicatedFrom": null,
+                "qualifiedName": "app_id@cl1",
+                "dataType": "int",
+                "name": "app_id",
+                "description": null,
+                "comment": "app id"
+            },
+            "guid": "df7109dc-711d-48e2-83a4-1a4338b7ef7d",
+            "status": "ACTIVE",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createTime": 1581528116088,
+            "updateTime": 1581528119809,
+            "version": 0,
+            "relationshipAttributes": {
+                "schema": [],
+                "inputToProcesses": [],
+                "meanings": [],
+                "table": {
+                    "guid": "9c67b531-7c93-4c97-b8d3-c483dcf0c1be",
+                    "typeName": "Table",
+                    "entityStatus": "ACTIVE",
+                    "displayText": "logging_fact_monthly_mv",
+                    "relationshipType": "Table_Columns",
+                    "relationshipGuid": "9dfcb327-26fc-4530-9841-5dcb76c760ce",
+                    "relationshipStatus": "ACTIVE",
+                    "relationshipAttributes": {
+                        "typeName": "Table_Columns"
+                    }
+                },
+                "outputFromProcesses": []
+            }
+        }
+    },
+    "entities": [{
+            "typeName": "Table",
+            "attributes": {
+                "owner": "Tim ETL",
+                "temporary": false,
+                "lastAccessTime": 1581528119807,
+                "replicatedTo": null,
+                "replicatedFrom": null,
+                "qualifiedName": "logging_fact_monthly_mv@cl1",
+                "description": "logging fact monthly materialized view",
+                "viewExpandedText": null,
+                "tableType": "Managed",
+                "createTime": 1581528119807,
+                "name": "logging_fact_monthly_mv",
+                "retention": 1581528119807,
+                "viewOriginalText": null
+            },
+            "guid": "9c67b531-7c93-4c97-b8d3-c483dcf0c1be",
+            "status": "ACTIVE",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createTime": 1581528119809,
+            "updateTime": 1581528153236,
+            "version": 0,
+            "relationshipAttributes": {
+                "schema": [],
+                "inputToProcesses": [],
+                "sd": {
+                    "guid": "77c51001-d078-4c68-a8bf-ef7bbf5b2f70",
+                    "typeName": "StorageDesc",
+                    "entityStatus": "ACTIVE",
+                    "displayText": "sd:hdfs://host:8000/apps/warehouse/sales",
+                    "relationshipType": "Table_StorageDesc",
+                    "relationshipGuid": "65fbec7a-d0d8-41ce-aaab-be2a955d0381",
+                    "relationshipStatus": "DELETED",
+                    "relationshipAttributes": {
+                        "typeName": "Table_StorageDesc"
+                    }
+                },
+                "columns": [{
+                        "guid": "8cd9e1f4-50ed-43be-868e-bdd3d42480c0",
+                        "typeName": "Column",
+                        "entityStatus": "ACTIVE",
+                        "displayText": "machine_id",
+                        "relationshipType": "Table_Columns",
+                        "relationshipGuid": "9e5b2202-7645-414d-8e1f-333008d50f70",
+                        "relationshipStatus": "ACTIVE",
+                        "relationshipAttributes": {
+                            "typeName": "Table_Columns"
+                        }
+                    }, {
+                        "guid": "df7109dc-711d-48e2-83a4-1a4338b7ef7d",
+                        "typeName": "Column",
+                        "entityStatus": "ACTIVE",
+                        "displayText": "app_id",
+                        "relationshipType": "Table_Columns",
+                        "relationshipGuid": "9dfcb327-26fc-4530-9841-5dcb76c760ce",
+                        "relationshipStatus": "ACTIVE",
+                        "relationshipAttributes": {
+                            "typeName": "Table_Columns"
+                        }
+                    }, {
+                        "guid": "37490f18-7563-4b53-93b4-a3ad927300c6",
+                        "typeName": "Column",
+                        "entityStatus": "ACTIVE",
+                        "displayText": "log",
+                        "relationshipType": "Table_Columns",
+                        "relationshipGuid": "1efad0d9-0723-41a2-b1f3-88b4aa0bdf7e",
+                        "relationshipStatus": "ACTIVE",
+                        "relationshipAttributes": {
+                            "typeName": "Table_Columns"
+                        }
+                    }, {
+                        "guid": "5dc91943-7c6c-4643-a1bd-d067385e4e23",
+                        "typeName": "Column",
+                        "entityStatus": "ACTIVE",
+                        "displayText": "time_id",
+                        "relationshipType": "Table_Columns",
+                        "relationshipGuid": "99a64a9f-c301-4eef-a6cd-159e88ee4339",
+                        "relationshipStatus": "DELETED",
+                        "relationshipAttributes": {
+                            "typeName": "Table_Columns"
+                        }
+                    }],
+                "meanings": [],
+                "db": {
+                    "guid": "dc01fff6-3ab7-4a54-aaa0-8ad63eb93a9c",
+                    "typeName": "DB",
+                    "entityStatus": "ACTIVE",
+                    "displayText": "Logging",
+                    "relationshipType": "Table_DB",
+                    "relationshipGuid": "768574dc-e845-4c69-9402-504ec965b656",
+                    "relationshipStatus": "ACTIVE",
+                    "relationshipAttributes": {
+                        "typeName": "Table_DB"
+                    }
+                },
+                "outputFromProcesses": [{
+                        "guid": "052aa3b6-951a-4021-857e-af4d814e86d0",
+                        "typeName": "LoadProcess",
+                        "entityStatus": "ACTIVE",
+                        "displayText": "loadLogsMonthly",
+                        "relationshipType": "process_dataset_outputs",
+                        "relationshipGuid": "1c5c1e88-7344-482d-9831-fdcf1a135a0b",
+                        "relationshipStatus": "ACTIVE",
+                        "relationshipAttributes": {
+                            "typeName": "process_dataset_outputs"
+                        }
+                    }]
+            },
+            "classifications": [
+                {
+                    "typeName": "ETL",
+                    "entityGuid": "052aa3b6-951a-4021-857e-af4d814e86d0",
+                    "entityStatus": "ACTIVE",
+                    "propagate": true,
+                    "removePropagationsOnEntityDelete": false
+                }, 
+                {
+                    "typeName": "Log Data",
+                    "entityGuid": "e7efbf35-196d-4b3c-96af-366ff86cef8f",
+                    "entityStatus": "ACTIVE",
+                    "propagate": true,
+                    "removePropagationsOnEntityDelete": false
+                }, {
+                    "typeName": "Log Data",
+                    "entityGuid": "9c67b531-7c93-4c97-b8d3-c483dcf0c1be",
+                    "entityStatus": "ACTIVE",
+                    "propagate": true,
+                    "removePropagationsOnEntityDelete": false
+                }]
+        }]
+}

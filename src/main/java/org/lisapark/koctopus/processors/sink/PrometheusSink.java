@@ -121,7 +121,6 @@ public class PrometheusSink extends AbstractExternalSink {
 
     @Override
     public boolean isConnectedTo(Source source) {
-
         return input.isConnectedTo(source);
     }
 
@@ -166,8 +165,7 @@ public class PrometheusSink extends AbstractExternalSink {
         );        
         consoleSink.addParameter(Parameter.integerParameterWithIdAndName(PAGE_SIZE_PARAMETER_ID, BATCH_SIZE)
                         .description(BATCH_SIZE_DESCRIPTION).defaultValue(100)
-        );
-     
+        );     
         return consoleSink;
     }
 

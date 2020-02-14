@@ -1,0 +1,26 @@
+{
+    "atlasDataTypeAsJsonString": {
+        "typeName": "semanticEquivalence",
+        "attributes": {
+            "inputs": [{
+                    "typeName": "rdbms_table",
+                    "uniqueAttributes": {
+                        "qualifiedName": "db1.schema1.table1"
+                    }
+                }],
+            "outputs": [{
+                    "typeName": "rdbms_table",
+                    "uniqueAttributes": {
+                        "qualifiedName": "db2.schema2.table2"
+                    }
+                }],
+            "confidenceLevel_0_to_100": 67,
+            "qualifiedName": "semanticEquivalence.db1.schema1.table1.db2.schema2.table2",
+            "name": "db1.schema1.table1.db2.schema2.table2",
+            "description": "Io-Tahoe data flow discovery"
+        },
+        "classification": [],
+        "status": "ACTIVE"
+    },
+    "workflowId": 1
+}

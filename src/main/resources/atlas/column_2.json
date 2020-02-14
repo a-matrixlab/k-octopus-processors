@@ -1,0 +1,41 @@
+{
+    "referredEntities": {},
+    "entities": [{
+            "typeName": "Column",
+            "attributes": {
+                "owner": null,
+                "replicatedTo": null,
+                "replicatedFrom": null,
+                "qualifiedName": "product_name@cl1",
+                "dataType": "string",
+                "name": "product_name",
+                "description": null,
+                "comment": "product name"
+            },
+            "guid": "5164c2ec-82c3-4bd9-b416-c2d0c8d667c2",
+            "status": "ACTIVE",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createTime": 1581528106669,
+            "updateTime": 1581528106669,
+            "version": 0,
+            "relationshipAttributes": {
+                "schema": [],
+                "inputToProcesses": [],
+                "meanings": [],
+                "table": {
+                    "guid": "93b5bc14-c1bb-41c1-8c4f-b42cc9bfd9a7",
+                    "typeName": "Table",
+                    "entityStatus": "ACTIVE",
+                    "displayText": "product_dim",
+                    "relationshipType": "Table_Columns",
+                    "relationshipGuid": "adba8254-27b9-4d74-b77a-eaef674faf27",
+                    "relationshipStatus": "ACTIVE",
+                    "relationshipAttributes": {
+                        "typeName": "Table_Columns"
+                    }
+                },
+                "outputFromProcesses": []
+            }
+        }]
+}

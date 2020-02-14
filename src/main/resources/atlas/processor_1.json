@@ -1,0 +1,105 @@
+{
+    "referredEntities": {},
+    "entities": [{
+            "typeName": "LoadProcess",
+            "attributes": {
+                "owner": null,
+                "outputs": [{
+                        "guid": "fc312441-ffa1-49bf-93b0-49805b1c7b62",
+                        "typeName": "Table",
+                        "uniqueAttributes": {
+                            "qualifiedName": "sales_fact_daily_mv@cl1"
+                        }
+                    }],
+                "queryGraph": "graph",
+                "replicatedTo": null,
+                "replicatedFrom": null,
+                "qualifiedName": "loadSalesDaily@cl1",
+                "inputs": [{
+                        "guid": "84893057-28c7-4202-bbaf-baddc664ac6e",
+                        "typeName": "Table",
+                        "uniqueAttributes": {
+                            "qualifiedName": "sales_fact@cl1"
+                        }
+                    }, {
+                        "guid": "f866c3fa-44bf-456c-ad1f-20451d75b6bc",
+                        "typeName": "Table",
+                        "uniqueAttributes": {
+                            "qualifiedName": "time_dim@cl1"
+                        }
+                    }],
+                "description": "hive query for daily summary",
+                "userName": null,
+                "queryId": "id",
+                "name": "loadSalesDaily",
+                "queryText": "create table as select ",
+                "startTime": 1581528145820,
+                "queryPlan": "plan",
+                "endTime": 1581528155820
+            },
+            "guid": "860b2b04-9600-4c69-b18c-05973d9321b0",
+            "status": "ACTIVE",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createTime": 1581528145821,
+            "updateTime": 1581528145821,
+            "version": 0,
+            "relationshipAttributes": {
+                "outputs": [{
+                        "guid": "fc312441-ffa1-49bf-93b0-49805b1c7b62",
+                        "typeName": "Table",
+                        "entityStatus": "ACTIVE",
+                        "displayText": "sales_fact_daily_mv",
+                        "relationshipType": "process_dataset_outputs",
+                        "relationshipGuid": "45728ae4-a5d6-412a-a403-940f819d7297",
+                        "relationshipStatus": "ACTIVE",
+                        "relationshipAttributes": {
+                            "typeName": "process_dataset_outputs"
+                        }
+                    }],
+                "inputs": [{
+                        "guid": "f866c3fa-44bf-456c-ad1f-20451d75b6bc",
+                        "typeName": "Table",
+                        "entityStatus": "ACTIVE",
+                        "displayText": "time_dim",
+                        "relationshipType": "dataset_process_inputs",
+                        "relationshipGuid": "4c93bf2a-2545-4f41-8bc6-2e5869b69149",
+                        "relationshipStatus": "ACTIVE",
+                        "relationshipAttributes": {
+                            "typeName": "dataset_process_inputs"
+                        }
+                    }, {
+                        "guid": "84893057-28c7-4202-bbaf-baddc664ac6e",
+                        "typeName": "Table",
+                        "entityStatus": "ACTIVE",
+                        "displayText": "sales_fact",
+                        "relationshipType": "dataset_process_inputs",
+                        "relationshipGuid": "f1feb7fb-b5fb-4cae-99c6-c5ca14098a9c",
+                        "relationshipStatus": "ACTIVE",
+                        "relationshipAttributes": {
+                            "typeName": "dataset_process_inputs"
+                        }
+                    }],
+                "meanings": []
+            },
+            "classifications": [{
+                    "typeName": "Dimension",
+                    "entityGuid": "f866c3fa-44bf-456c-ad1f-20451d75b6bc",
+                    "entityStatus": "ACTIVE",
+                    "propagate": true,
+                    "removePropagationsOnEntityDelete": false
+                }, {
+                    "typeName": "Fact",
+                    "entityGuid": "84893057-28c7-4202-bbaf-baddc664ac6e",
+                    "entityStatus": "ACTIVE",
+                    "propagate": true,
+                    "removePropagationsOnEntityDelete": false
+                }, {
+                    "typeName": "ETL",
+                    "entityGuid": "860b2b04-9600-4c69-b18c-05973d9321b0",
+                    "entityStatus": "ACTIVE",
+                    "propagate": true,
+                    "removePropagationsOnEntityDelete": false
+                }]
+        }]
+}

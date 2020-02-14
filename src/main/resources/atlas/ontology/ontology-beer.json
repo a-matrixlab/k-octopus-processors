@@ -1,0 +1,70 @@
+{
+    "enumTypes": [],
+    "structTypes": [],
+    "traitTypes": null,
+    "classTypes": [{
+            "typeName": "ontology_beer",
+            "typeDescription": "The root category for the beer business ontology.",
+            "typeVersion": "1.0",
+            "attributeDefinitions": [{
+                    "name": "name",
+                    "dataTypeName": "string",
+                    "multiplicity": "required",
+                    "isComposite": false,
+                    "isUnique": true,
+                    "isIndexable": true,
+                    "reverseAttributeName": null,
+                    "defaultValue": null,
+                    "description": null,
+                    "options": null
+                }, 
+                {
+                    "name": "description",
+                    "dataTypeName": "string",
+                    "multiplicity": "optional",
+                    "isComposite": false,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "reverseAttributeName": null,
+                    "defaultValue": null,
+                    "description": null,
+                    "options": null
+                }, 
+                {
+                    "name": "locationUri",
+                    "dataTypeName": "string",
+                    "multiplicity": "optional",
+                    "isComposite": false,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "reverseAttributeName": null,
+                    "defaultValue": null,
+                    "description": null,
+                    "options": null
+                }, {
+                    "name": "owner",
+                    "dataTypeName": "string",
+                    "multiplicity": "optional",
+                    "isComposite": false,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "reverseAttributeName": null,
+                    "defaultValue": null,
+                    "description": null,
+                    "options": null
+                }, {
+                    "name": "createTime",
+                    "dataTypeName": "long",
+                    "multiplicity": "optional",
+                    "isComposite": false,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "reverseAttributeName": null,
+                    "defaultValue": null,
+                    "description": null,
+                    "options": null
+                }],
+            "hierarchicalMetaTypeName": "org.apache.atlas.typesystem.types.ClassType"
+        }],
+    "superTypes": ["ontology-d"]
+}

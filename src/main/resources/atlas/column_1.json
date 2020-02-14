@@ -1,0 +1,48 @@
+{
+    "referredEntities": {},
+    "entities": [{
+            "typeName": "Column",
+            "attributes": {
+                "owner": null,
+                "replicatedTo": null,
+                "replicatedFrom": null,
+                "qualifiedName": "name@cl1",
+                "dataType": "string",
+                "name": "name",
+                "description": null,
+                "comment": "customer name"
+            },
+            "guid": "8640a94f-1838-4ea4-a70b-5c78c94c870a",
+            "status": "ACTIVE",
+            "createdBy": "admin",
+            "updatedBy": "admin",
+            "createTime": 1581528109591,
+            "updateTime": 1581528109591,
+            "version": 0,
+            "relationshipAttributes": {
+                "schema": [],
+                "inputToProcesses": [],
+                "meanings": [],
+                "table": {
+                    "guid": "bd40df77-87c2-4763-97da-8bbcd30cee13",
+                    "typeName": "Table",
+                    "entityStatus": "ACTIVE",
+                    "displayText": "customer_dim",
+                    "relationshipType": "Table_Columns",
+                    "relationshipGuid": "a45a6bcf-bcd1-414a-9410-4153e3cb347d",
+                    "relationshipStatus": "ACTIVE",
+                    "relationshipAttributes": {
+                        "typeName": "Table_Columns"
+                    }
+                },
+                "outputFromProcesses": []
+            },
+            "classifications": [{
+                    "typeName": "PII",
+                    "entityGuid": "8640a94f-1838-4ea4-a70b-5c78c94c870a",
+                    "entityStatus": "ACTIVE",
+                    "propagate": true,
+                    "removePropagationsOnEntityDelete": false
+                }]
+        }]
+}
